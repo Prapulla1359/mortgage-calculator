@@ -1,0 +1,39 @@
+<!--Added for Chart-->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <br>
+      <h3 class="text-center">Mortgage Pie Chart</h3>
+      <p-chart type="pie" [data]="datapie"></p-chart>
+
+    </div>
+
+    <div class="col-xs-6">
+      <br>
+      <h3 class="text-center">Mortgage Summary Report</h3>
+      <!-- Added for responsive table-->
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Payment #</th>
+            <th scope="col">Payment</th>
+            <th scope="col">Interest</th>
+            <th scope="col">Principal</th>
+            <th scope="col">Balance</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let eachPayment of getPayments">
+            <td>#{{eachPayment.index}}</td>
+            <td>{{eachPayment.payment | currency:'USD':true:'1.2-2'}}</td>
+            <td>{{eachPayment.interest | currency:'USD':true:'1.2-2'}}</td>
+            <td>{{eachPayment.principal| currency:'USD':true:'1.2-2'}}</td>
+            <td>{{eachPayment.balance | currency:'USD':true:'1.2-2'}}</td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+  </div>
+</div>

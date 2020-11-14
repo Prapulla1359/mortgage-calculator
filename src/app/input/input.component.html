@@ -1,0 +1,93 @@
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="calMortgage()" #f="ngForm">
+        <div
+          id="user-data"
+          ngModelGroup="userData"
+          #userData="ngModelGroup">
+          <div class="form-group">
+            <label for="mortgageAmount">Mortgage Amount</label>
+            <input
+              type="number"
+              id="mortgageAmount"
+              class="form-control"
+              [(ngModel)] = "mortgageObj.mortgageAmount"
+
+              name="mortgageAmount"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="depositAmount">Deposit Amount</label>
+            <input
+              type="number"
+              id="depositAmount"
+              class="form-control"
+              [(ngModel)] = "mortgageObj.depositAmount"
+
+              name="depositAmount"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="loanAmount">Loan Amount</label>
+            <input
+              type="number"
+              id="loanAmount"
+              class="form-control"
+              [(ngModel)] = "mortgageObj.loanAmount"
+
+              name="loanAmount"
+              disabled>
+          </div>
+          <div class="form-group">
+            <label for="interestRate">Interest Rate</label>
+            <input
+              type="number"
+              id="interestRate"
+              class="form-control"
+              [(ngModel)] = "mortgageObj.interestRate"
+
+              name="interestRate"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="amortizationPeriod">Amortization Period</label>
+            <select  [(ngModel)] = "mortgageObj.amortizationPeriod"
+
+                     id="amortizationPeriod"
+                     class="form-control"
+                     name="amortizationPeriod">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+              <option>20</option>
+              <option>25</option>
+              <option>30</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="paymentFrequency">Payment Frequency</label>
+            <select [(ngModel)] = "mortgageObj.paymentFrequency"
+
+                    id="paymentFrequency"
+                    class="form-control"
+                    name="paymentFrequency">
+              <option value="Monthly">Monthly</option>
+              <option>Bi-weekly</option>
+              <option>Weekly</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
