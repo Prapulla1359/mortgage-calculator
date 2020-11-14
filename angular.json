@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mortage-calculator": {
+    "mortgage-calculator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mortage-calculator",
+            "outputPath": "dist/mortgage-calculator",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/chart.js/dist/Chart.js"]
           },
           "configurations": {
             "production": {
@@ -65,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mortage-calculator:build"
+            "browserTarget": "mortgage-calculator:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mortage-calculator:build:production"
+              "browserTarget": "mortgage-calculator:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mortage-calculator:build"
+            "browserTarget": "mortgage-calculator:build"
           }
         },
         "test": {
@@ -91,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -113,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mortage-calculator:serve"
+            "devServerTarget": "mortgage-calculator:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mortage-calculator:serve:production"
+              "devServerTarget": "mortgage-calculator:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "mortage-calculator"
+  "defaultProject": "mortgage-calculator"
 }
