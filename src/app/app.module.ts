@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { OutputComponent } from './output/output.component';
 import { InputComponent } from './input/input.component';
 import {MortgageService} from './service/mortgage.service';
-import { HeaderComponent } from './header/header/header.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MortgageService} from '../../service/mortgage.service';
+import {MortgageService} from '../service/mortgage.service';
 import {Subscription} from 'rxjs';
 
 @Component({

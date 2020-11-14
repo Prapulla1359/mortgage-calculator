@@ -3,7 +3,7 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form (ngSubmit)="calMortgage()" #f="ngForm">
+      <form #f="ngForm">
         <div
           id="user-data"
           ngModelGroup="userData"
@@ -15,7 +15,7 @@
               id="mortgageAmount"
               class="form-control"
               [(ngModel)] = "mortgageObj.mortgageAmount"
-
+              (change) = "calMortgage()"
               name="mortgageAmount"
               required>
           </div>
@@ -26,7 +26,7 @@
               id="depositAmount"
               class="form-control"
               [(ngModel)] = "mortgageObj.depositAmount"
-
+              (change) = "calMortgage()"
               name="depositAmount"
               required>
           </div>
@@ -37,7 +37,7 @@
               id="loanAmount"
               class="form-control"
               [(ngModel)] = "mortgageObj.loanAmount"
-
+              (change) = "calMortgage()"
               name="loanAmount"
               disabled>
           </div>
@@ -48,14 +48,14 @@
               id="interestRate"
               class="form-control"
               [(ngModel)] = "mortgageObj.interestRate"
-
+              (change) = "calMortgage()"
               name="interestRate"
               required>
           </div>
           <div class="form-group">
             <label for="amortizationPeriod">Amortization Period</label>
             <select  [(ngModel)] = "mortgageObj.amortizationPeriod"
-
+                     (change) = "calMortgage()"
                      id="amortizationPeriod"
                      class="form-control"
                      name="amortizationPeriod">
@@ -74,7 +74,7 @@
           <div class="form-group">
             <label for="paymentFrequency">Payment Frequency</label>
             <select [(ngModel)] = "mortgageObj.paymentFrequency"
-
+                    (change) = "calMortgage()"
                     id="paymentFrequency"
                     class="form-control"
                     name="paymentFrequency">
@@ -83,7 +83,7 @@
               <option>Weekly</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary">Calculate</button>
+          <!--<button class="btn btn-primary">Calculate</button>-->
         </div>
       </form>
     </div>
