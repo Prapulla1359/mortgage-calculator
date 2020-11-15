@@ -8,6 +8,9 @@ import { OutputComponent } from './output/output.component';
 import { InputComponent } from './input/input.component';
 import {MortgageService} from './service/mortgage.service';
 import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ChartModule
+    ChartModule,
+    MatTableModule,
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [MortgageService],
   bootstrap: [AppComponent]

@@ -5,22 +5,46 @@
       <br>
       <h3 class="text-center">Mortgage Pie Chart</h3>
       <p-chart type="pie" [data]="datapie"></p-chart>
-
     </div>
 
     <div class="col-xs-6">
       <br>
-      <h3 class="text-center">Mortgage Summary Report</h3>
+      <h3 class="text-center">Mortgage Payment Schedule</h3>
       <!-- Added for responsive table-->
       <div class="table-responsive">
-        <table class="table">
-          <thead>
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="Payment #">
+            <th mat-header-cell *matHeaderCellDef  mat-sort-header>Payment #</th>
+            <td mat-cell *matCellDef="let element">#{{element.index}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Principal Payment">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Principal Payment </th>
+            <td mat-cell *matCellDef="let element"> {{element.payment | currency:'USD':true:'1.2-2'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Interest Payment">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Interest Payment </th>
+            <td mat-cell *matCellDef="let element"> {{element.interest | currency:'USD':true:'1.2-2'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Total Payment">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Payment </th>
+            <td mat-cell *matCellDef="let element"> {{element.principal| currency:'USD':true:'1.2-2'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Ending Balance">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Ending Balance </th>
+            <td mat-cell *matCellDef="let element"> {{element.balance | currency:'USD':true:'1.2-2'}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </mat-table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+          <!--<thead>
           <tr>
             <th scope="col">Payment #</th>
-            <th scope="col">Payment</th>
-            <th scope="col">Interest</th>
-            <th scope="col">Principal</th>
-            <th scope="col">Balance</th>
+            <th scope="col">Principal Payment</th>
+            <th scope="col">Interest Payment</th>
+            <th scope="col">Total Payment</th>
+            <th scope="col">Ending Balance</th>
           </tr>
           </thead>
           <tbody>
@@ -32,7 +56,7 @@
             <td>{{eachPayment.balance | currency:'USD':true:'1.2-2'}}</td>
           </tr>
           </tbody>
-        </table>
+        </table>-->
         </div>
       </div>
   </div>

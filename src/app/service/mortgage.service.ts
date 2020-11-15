@@ -53,6 +53,10 @@ export class MortgageService{
     return this.datapie;
   }
 
+  getPay():any{
+    return this.getPayments;
+  }
+
   loanAmountfunc(): number {
     {
       let loanAmount: number;
