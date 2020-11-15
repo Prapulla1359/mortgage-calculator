@@ -4,11 +4,9 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <form #f="ngForm">
-        <div
-          id="user-data"
-          ngModelGroup="userData"
-          #userData="ngModelGroup">
-<div class="form-horizontal">
+        <small style="padding-left: 320px" class="form-text text-danger" *ngIf="isValidAmount">Please enter a valid Deposit Amount.</small>
+
+      <div class="form-horizontal">
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
             <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Mortgage Amount" data></i>
             <label for="mortgageAmount">Mortgage Amount</label>
@@ -34,7 +32,7 @@
               id="depositAmount"
               class="form-control"
               [(ngModel)] = "mortgageObj.depositAmount"
-              (change) = "calMortgage()"
+              (change) = "calMortgage(); isValid()"
               name="depositAmount"
               required>
             </div>
@@ -111,8 +109,8 @@
             </div>
           </div>
           <!--<button class="btn btn-primary">Calculate</button>-->
-</div>
-        </div>
+      </div>
+
       </form>
     </div>
   </div>

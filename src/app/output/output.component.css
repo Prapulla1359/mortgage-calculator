@@ -16,7 +16,6 @@ th.mat-header-cell, td.mat-cell {
 }
 
 mat-paginator {
-
   text-align: center;
   margin: 0 auto;
 }
@@ -53,5 +52,10 @@ mat-paginator {
     align-items: start;
     padding: 8px 24px;
   }
+  h4 {
+    font-size: 1em;
+  }
+
+
 }
 

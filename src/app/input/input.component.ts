@@ -18,7 +18,7 @@ export class InputComponent implements OnInit {
     mortgageAmount: 0,
     paymentFrequency: ''
   };
-
+  isValidAmount: boolean = false;
   constructor(private mortgageService: MortgageService) { }
 
   ngOnInit(): void{
@@ -28,14 +28,21 @@ export class InputComponent implements OnInit {
     this.mortgageService.mortgageDetails.amortizationPeriod = 25;
     this.mortgageService.mortgageDetails.interestRate = 6.0;
     this.mortgageService.mortgageDetails.paymentFrequency = 'Monthly';
-
     this.mortgageService.mortgageDetails.loanAmount = this.mortgageService.loanAmountfunc();
     this.calMortgage();
-
   }
 
   calMortgage(): void {
     this.mortgageService.calculateMortgage();
+  }
+  isValid(): void{
+    this.mortgageObj = this.mortgageService.mortgageDetails;
+    if (this.mortgageObj.depositAmount > this.mortgageObj.mortgageAmount)
+    {
+      this.isValidAmount = true;
+    } else {
+      this.isValidAmount = false;
+    }
   }
 
 }
