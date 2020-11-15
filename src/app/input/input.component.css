@@ -7,4 +7,14 @@ span{
 input{
   width: 50%
 }
+/*
+select {
+  height: 40px;
+  width: 50%
+}*/
+.form-inline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 

@@ -1,1 +1,5 @@
-
+.jumbotron {
+  background-size: cover;
+  padding-top: 2px !important;
+  padding-bottom: 10px !important;
+}

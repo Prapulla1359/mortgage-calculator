@@ -4,13 +4,6 @@ import { Subscription } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
 @Component({
   selector: 'app-output',
   templateUrl: './output.component.html',
@@ -41,10 +34,12 @@ export class OutputComponent implements OnInit, AfterViewInit{
     this.getPayments = this.mortgageService.calcPayments();
     this.isChangeSub =  this.mortgageService.tableUpdated.subscribe((tableData: any) => {
       this.getPayments = tableData;
+
     });
     // use the data setter in ngOninit
     this.dataSource.data = this.getPayments;
-  }
+    this.refresh();
+ }
 
   // As the data is loading asynchronously,
   // set the datasource paginator after view initialization
@@ -52,8 +47,17 @@ export class OutputComponent implements OnInit, AfterViewInit{
     this.dataSource.paginator = this.paginator;
   }
 
+  // Method to perform mortgage calculation
   calMortgage(): void {
     this.mortgageService.calculateMortgage();
+  }
+
+  // Refersh the table for new updated data
+   refresh() {
+    this.mortgageService.tableUpdated.subscribe((tableData: any) => {
+      this.getPayments = tableData;
+      this.dataSource.data = this.getPayments;
+    });
   }
 }
 

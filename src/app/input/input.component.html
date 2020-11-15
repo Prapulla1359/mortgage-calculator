@@ -10,6 +10,7 @@
           #userData="ngModelGroup">
 <div class="form-horizontal">
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Mortgage Amount" data></i>
             <label for="mortgageAmount">Mortgage Amount</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
@@ -24,6 +25,7 @@
             </div>
           </div>
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Deposit Amount" data></i>
             <label for="depositAmount">Deposit Amount</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
@@ -38,6 +40,7 @@
             </div>
           </div>
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Loan Amount" data></i>
             <label for="loanAmount">Loan Amount</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
@@ -52,6 +55,7 @@
             </div>
           </div>
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Interest Rate" data></i>
             <label for="interestRate">Interest Rate</label>
             <div class="input-group">
             <input
@@ -66,6 +70,7 @@
             </div>
           </div>
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Amortization Period" data></i>
             <label for="amortizationPeriod">Amortization Period</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
@@ -74,7 +79,7 @@
                      id="amortizationPeriod"
                      class="form-control"
                      name="amortizationPeriod"
-                     >
+                     style="width: 200px">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -89,6 +94,7 @@
             </div>
           </div>
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Payment Frequency" data></i>
             <label for="paymentFrequency">Payment Frequency</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
@@ -96,7 +102,8 @@
                     (change) = "calMortgage()"
                     id="paymentFrequency"
                     class="form-control"
-                    name="paymentFrequency">
+                    name="paymentFrequency"
+                    style="width: 200px">
               <option value="Monthly">Monthly</option>
               <option>Bi-weekly</option>
               <option>Weekly</option>
