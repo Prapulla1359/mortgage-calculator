@@ -105,7 +105,7 @@ In reacting to the design, modifications were made to it's living component.
 ## Template Driven Approach to build the template as there are only few fields present to perform calculation.
 
 ## Formulas used for Calculation
-```
+
 	a) LoanAmount = Mortgage Amount - Deposit Amount
 	b) Monthly Interest Rate based on Payment Frequency
 		If Monthly   -->  1/12
@@ -122,7 +122,7 @@ In reacting to the design, modifications were made to it's living component.
 		If Monthly   -->  monthly payment amount
 		If Weekly    -->  monthly payment amount / 4
 		If Bi-Weekly -->  monthly payment amount / 2
-    ```
+    
 
 ## Deposit Amount should be lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".
 
