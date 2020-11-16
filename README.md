@@ -9,6 +9,8 @@ Below you should find a brief description about the application and it's functio
 This single page application is designed with the functionality of Mortgage Payment Calculator. This calculator determines your mortgage payment and provides you with a mortgage payment schedule. 
 It displays the Mortgage Payment Schedule in table format with pagination support and Mortgage Pie chart to present the data in a visual way. Mortgage Monthly Payment is displayed in the header section.
 
+Hosted Solution Link can be accessible though internet at https://prapulla-smp.web.app/
+
 ## Getting Started
 
 ### Installing and Running
