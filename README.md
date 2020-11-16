@@ -124,13 +124,13 @@ In reacting to the design, modifications were made to it's living component.
 		If Bi-Weekly -->  monthly payment amount / 2
     
 
-## Deposit Amount should be lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".
+### Deposit Amount should be lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".
 
-## On change of every input, it does the mortgage calculation and displays the mortgage Monthly Payment in the header section (highlighted).
+### On change of every input, it does the mortgage calculation and displays the mortgage Monthly Payment in the header section (highlighted).
 
-## Used Pie Chart to present the data in a visual way. Datasets used in the chart are Monthly Payment and Monthly Interest Paid.
+### Used Pie Chart to present the data in a visual way. Datasets used in the chart are Monthly Payment and Monthly Interest Paid.
 
-## Used material table : <mat-table> to display the responsive data for Mortgage Payment Schedule. Pagination Support available for the table.
+### Used material table : <mat-table> to display the responsive data for Mortgage Payment Schedule. Pagination Support available for the table.
    Below are the data to be displayed in the table:
 	a) Payment #          -->  Payment Number
 	b) Principal Payment  -->  (payment > principal + interestPayment) ? principal + pi : payment
@@ -138,7 +138,7 @@ In reacting to the design, modifications were made to it's living component.
 	d) Total Payment      -->  payment - interestPayment
 Iterate though the data until principal > 0. Iteration breaks at 5000 (fail-safe condition).	
 
-## Mobile capability
+### Mobile capability
 
 ### Additional Info
 
