@@ -169,11 +169,11 @@ Below dependencies are added to support responsive material table, responsive ch
 ##Development server
 Used Firebase hosting to host the solution.
 
-#### Commands to host the solution
-ng build
-firebase login
-firbase init
-firebase deploy
+##Commands to host the solution
+    1. ng build
+    2. firebase login
+    3. firbase init
+    4. firebase deploy
 
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
