@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -15,4 +14,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatPaginatorModule
   ]
 })
+
+// Module defined for Pagination Support
 export class PaginationModule { }

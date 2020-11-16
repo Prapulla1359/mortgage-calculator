@@ -1,3 +1,4 @@
+// Mortgage Model Object
 export class Mortgage {
 
   public mortgageAmount: number;

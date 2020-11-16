@@ -4,14 +4,18 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <form #f="ngForm">
+        <!--Need to input the Deposit Amount lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".-->
         <small style="padding-left: 320px" class="form-text text-danger" *ngIf="isValidAmount">Please enter a valid Deposit Amount.</small>
 
+        <!-- Template Driven Form - to input the data required for Mortgage Calculator-->
       <div class="form-horizontal">
           <div class="form-group" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
             <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Mortgage Amount" data></i>
             <label for="mortgageAmount">Mortgage Amount</label>
             <div class="input-group">
+              <!--Added Tooltip -->
             <span class="input-group-addon">$</span>
+              <!--Input Field for Mortgage Amount-->
             <input
               type="number"
               id="mortgageAmount"
@@ -27,6 +31,7 @@
             <label for="depositAmount">Deposit Amount</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
+              <!--Input Field for Deposit Amount-->
             <input
               type="number"
               id="depositAmount"
@@ -42,6 +47,7 @@
             <label for="loanAmount">Loan Amount</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
+              <!--Input Field for Loan Amount-->
             <input
               type="number"
               id="loanAmount"
@@ -56,6 +62,7 @@
             <i class="fa fa-question-circle" style="width: 20px;height: 20px" data-toggle="tooltip" title="Interest Rate" data></i>
             <label for="interestRate">Interest Rate</label>
             <div class="input-group">
+              <!--Input Field for Interest Rate in %-->
             <input
               type="number"
               id="interestRate"
@@ -72,6 +79,7 @@
             <label for="amortizationPeriod">Amortization Period</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
+              <!--Dropdown menu for Amortization Period-->
             <select  [(ngModel)] = "mortgageObj.amortizationPeriod"
                      (change) = "calMortgage()"
                      id="amortizationPeriod"
@@ -96,6 +104,7 @@
             <label for="paymentFrequency">Payment Frequency</label>
             <div class="input-group">
             <span class="input-group-addon">$</span>
+              <!--Dropdown menu for Payment Frequency-->
             <select [(ngModel)] = "mortgageObj.paymentFrequency"
                     (change) = "calMortgage()"
                     id="paymentFrequency"
@@ -110,7 +119,6 @@
           </div>
           <!--<button class="btn btn-primary">Calculate</button>-->
       </div>
-
       </form>
     </div>
   </div>

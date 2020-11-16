@@ -3,15 +3,18 @@
   <div class="row">
     <div class="col-xs-6">
       <br>
-      <h4 class="text-center">Mortgage Pie Chart</h4>
-      <p-chart responsive="true" type="pie" [data]="datapie"></p-chart>
+      <h4 class="text-center"><strong>Mortgage Pie Chart</strong></h4>
+      <!-- Output Data - to display the output in the form of Pie Chart -->
+      <p-chart responsive="true" type="pie" [data]="chartData"></p-chart>
     </div>
 
     <div class="col-xs-6">
       <br>
-      <h4 class="text-center">Mortgage Payment Schedule</h4>
+      <h4 class="text-center"><strong>Mortgage Payment Schedule</strong></h4>
       <!-- Added for responsive table-->
+      <!-- Output Component - to display the output in Material Responsive Table format with pagination support-->
       <div class="example-container mat-elevation-z8">
+        <!--Data Source should be mapped to this property which holds the table data-->
         <mat-table [dataSource]="dataSource">
           <ng-container matColumnDef="Payment #">
             <th mat-header-cell *matHeaderCellDef  mat-sort-header>Payment #</th>
@@ -37,27 +40,9 @@
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </mat-table>
+        <!--Added for Pagination Support-->
         <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
-          <!--<thead>
-          <tr>
-            <th scope="col">Payment #</th>
-            <th scope="col">Principal Payment</th>
-            <th scope="col">Interest Payment</th>
-            <th scope="col">Total Payment</th>
-            <th scope="col">Ending Balance</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let eachPayment of getPayments">
-            <td>#{{eachPayment.index}}</td>
-            <td>{{eachPayment.payment | currency:'USD':true:'1.2-2'}}</td>
-            <td>{{eachPayment.interest | currency:'USD':true:'1.2-2'}}</td>
-            <td>{{eachPayment.principal| currency:'USD':true:'1.2-2'}}</td>
-            <td>{{eachPayment.balance | currency:'USD':true:'1.2-2'}}</td>
-          </tr>
-          </tbody>
-        </table>-->
-        </div>
+      </div>
       </div>
   </div>
 </div>

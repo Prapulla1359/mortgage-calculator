@@ -7,6 +7,6 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
-
+// To bootstrap the angular application initially
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
