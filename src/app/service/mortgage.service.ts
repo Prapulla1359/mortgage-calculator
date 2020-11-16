@@ -178,7 +178,7 @@ export class MortgageService{
     const payments      = [];
     const frequency     = this.mortgageDetails.paymentFrequency;
     let principal       = this.loanAmountfunc();
-    let payment         = Number(this.periodPaymentAmount().toFixed(2));
+    let payment         = Number(this.periodPaymentAmount());
     const interestRate  = Number(this.monthlyInterestRate(frequency));
     let key  = 0;
     let pi = null;
