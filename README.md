@@ -145,7 +145,7 @@ Iterate though the data until principal > 0. Iteration breaks at 5000 (fail-safe
 ### Additional Info
 
 Below dependencies are added to support responsive material table, responsive chart, touch gestures and bootstrap functionalities to the webapp.
-
+```
 1. npm install primeng --save
 
 2. npm install primeicons --save
@@ -170,9 +170,10 @@ Below dependencies are added to support responsive material table, responsive ch
 Used Firebase hosting to host the solution.
 
 ##Commands to host the solution
+```
     1. ng build
     2. firebase login
-    3. firbase init
+    3. firebase init
     4. firebase deploy
 
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
