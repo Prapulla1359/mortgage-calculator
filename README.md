@@ -102,9 +102,9 @@ App designed to support multiple devices like mobile/tablet/laptop. Uses Bootstr
 
 In reacting to the design, modifications were made to it's living component.
 
-1. Template Driven Approach to build the template as there are only few fields present to perform calculation.
+#### 1.Template Driven Approach to build the template as there are only few fields present to perform calculation.
 
-2. Formulas used for Calculation
+#### 2.Formulas used for Calculation
 
 	a) LoanAmount = Mortgage Amount - Deposit Amount
 	b) Monthly Interest Rate based on Payment Frequency
@@ -122,14 +122,15 @@ In reacting to the design, modifications were made to it's living component.
 		If Monthly   -->  monthly payment amount
 		If Weekly    -->  monthly payment amount / 4
 		If Bi-Weekly -->  monthly payment amount / 2
+    
 
-3. Deposit Amount should be lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".
+#### 3.Deposit Amount should be lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".
 
-4. On change of every input, it does the mortgage calculation and displays the mortgage Monthly Payment in the header section (highlighted).
+#### 4.On change of every input, it does the mortgage calculation and displays the mortgage Monthly Payment in the header section (highlighted).
 
-3. Used Pie Chart to present the data in a visual way. Datasets used in the chart are Monthly Payment and Monthly Interest Paid.
+#### 5.Used Pie Chart to present the data in a visual way. Datasets used in the chart are Monthly Payment and Monthly Interest Paid.
 
-4. Used material table : <mat-table> to display the responsive data for Mortgage Payment Schedule. Pagination Support available for the table.
+#### 6.Used material table : <mat-table> to display the responsive data for Mortgage Payment Schedule. Pagination Support available for the table.
    Below are the data to be displayed in the table:
 	a) Payment #          -->  Payment Number
 	b) Principal Payment  -->  (payment > principal + interestPayment) ? principal + pi : payment
@@ -137,7 +138,7 @@ In reacting to the design, modifications were made to it's living component.
 	d) Total Payment      -->  payment - interestPayment
 Iterate though the data until principal > 0. Iteration breaks at 5000 (fail-safe condition).	
 
-5. Mobile capability
+#### Mobile capability
 
 ### Additional Info
 
