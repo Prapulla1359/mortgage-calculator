@@ -142,6 +142,8 @@ Iterate though the data until principal > 0. Iteration breaks at 5000 (fail-safe
 
 #### Mobile capability
 
+#### Used Karma V5.1.1 and Jasmine 3.6.0.
+
 ### Additional Info
 
 Below dependencies are added to support responsive material table, responsive chart, touch gestures and bootstrap functionalities to the webapp.
