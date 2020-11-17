@@ -33,7 +33,7 @@ Using the Mortgage Payment Calculator, the user shoulb be able to:
 
 1. Fill in the Mortgage Amount, Deposit Amount, Interest Rate in % of Mortage Calulator form.
 
-2. Select the Amortization Period and Payment Frequency from dropdown menu of the form. (the Deposit Amount field is DISABLED - i.e. It calculates (Mortgage Amount minus Deposit Amount).
+2. Select the Amortization Period and Payment Frequency from dropdown menu of the form. (Loan Amount field is DISABLED - i.e. It calculates (Mortgage Amount minus Deposit Amount).
 
 3. On change of any input data (tab out of fields), the calculator calculates the mortgage payment and displays the mortgage Monthly Payment in the header section (highlighted).
 
@@ -101,12 +101,12 @@ Using the Mortgage Payment Calculator, the user shoulb be able to:
 App designed to support multiple devices like mobile/tablet/laptop. Uses Bootstrap and @media tag to shift elements when needed.
 
 ### Implementation
-
+```
 In reacting to the design, modifications were made to it's living component.
 
-#### 1.Template Driven Approach to build the template as there are only few fields present to perform calculation.
+1.Template Driven Approach to build the template as there are only few fields present to perform calculation.
 
-#### 2.Formulas used for Calculation
+2.Formulas used for Calculation
 
 	a) LoanAmount = Mortgage Amount - Deposit Amount
 	b) Monthly Interest Rate based on Payment Frequency
@@ -126,20 +126,21 @@ In reacting to the design, modifications were made to it's living component.
 		If Bi-Weekly -->  monthly payment amount / 2
     
 
-#### 3.Deposit Amount should be lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".
+3.Deposit Amount should be lower than Mortgage Amount. Otherwise, Validation error will be displayed stating "Please enter a valid Deposit Amount".
 
-#### 4.On change of every input, it does the mortgage calculation and displays the mortgage Monthly Payment in the header section (highlighted).
+4.On change of every input, it does the mortgage calculation and displays the mortgage Monthly Payment in the header section (highlighted).
 
-#### 5.Used Pie Chart to present the data in a visual way. Datasets used in the chart are Monthly Payment and Monthly Interest Paid.
+5.Used Pie Chart to present the data in a visual way. Datasets used in the chart are Monthly Payment and Monthly Interest Paid.
 
-#### 6.Used material table : <mat-table> to display the responsive data for Mortgage Payment Schedule. Pagination Support available for the table.
+6.Used material table : <mat-table> to display the responsive data for Mortgage Payment Schedule. Pagination Support available for the table.
+ 
    Below are the data to be displayed in the table:
 	a) Payment #          -->  Payment Number
 	b) Principal Payment  -->  (payment > principal + interestPayment) ? principal + pi : payment
 	c) Interest Payment   -->  principal * interestRate
 	d) Total Payment      -->  payment - interestPayment
 Iterate though the data until principal > 0. Iteration breaks at 5000 (fail-safe condition).	
-
+```
 #### Mobile capability
 
 #### Used Karma V5.1.1 and Jasmine 3.6.0.
