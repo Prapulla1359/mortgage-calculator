@@ -1,6 +1,6 @@
 # Mortgage Payment Calculator
 
-## Intro
+## Introduction
 
 Below you should find a brief description about the application and it's functionalities, how to install and run as well as some extra information on the project files.
 
