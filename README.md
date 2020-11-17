@@ -96,6 +96,8 @@ Using the Mortgage Payment Calculator, the user shoulb be able to:
 *Injected Component*: Input, Output and Header
 *Data*: Mortgage Payment Calculations are performed here.
 
+#### Model/Entity Object: Mortgage
+
 ### Mobile Support
 
 App designed to support multiple devices like mobile/tablet/laptop. Uses Bootstrap and @media tag to shift elements when needed.
